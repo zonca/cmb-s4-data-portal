@@ -12,8 +12,7 @@
     </div>
 
     <p>
-      Choose the dataset(s) you wish to download, then click the <strong>Transfer</strong> button to begin transferring the full dataset(s) from
-      <a href="{{url_for('profile')}}" title="Click to change source endpoint on the Profile page.">{{- 'ANL' if session.source_endpoint == 0 else 'NERSC' -}}</a>.
+      Choose the dataset(s) you wish to download, then click the <strong>Transfer</strong> button to begin transferring the full dataset(s) from NERSC</a>.
       <strong>Or</strong>, you can click on a catalog dataset to browse and choose individual files for transfer (not supported for image datasets).
       See <a href="{{url_for('render_doc', doc_name='download')}}">here</a> for detailed instructions.
     </p>
