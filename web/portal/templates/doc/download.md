@@ -1,6 +1,6 @@
 ## How To Download Data
 
-The [CMB-S4 Data Portal](https://cmbs4-portal.nersc.gov/) allows anyone to transfer the CMB-S4 released data using Globus.
+The [CMB-S4 Data Portal](https://data.cmb-s4.org/) allows anyone to transfer the CMB-S4 released data using Globus.
 
 To get started click Login to authenticate into Globus using your organizational login or existing GlobusID. If needed, create a GlobusID using the "Sign Up" link.
 
