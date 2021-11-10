@@ -21,11 +21,17 @@
       To learn more about a dataset, click the "doc" link next to the dataset name.
     </p>
 
+    <p id="permission_filter">
+      Permissions filter:
+      <label style="margin: 0 8px;"><input class="filter" type="checkbox" value="public" checked> Public</label>
+      <label style="margin: 0 8px;"><input class="filter" type="checkbox" value="s4only"> CMB-S4 collaboration only</label>
+      <label style="margin: 0 8px;"><input class="filter" type="checkbox" value="dmonly"> CMB-S4 Data Management only</label>
+    </p>
     <p id="dataset_filter">
       Dataset filter:
-      <label style="margin: 0 8px;"><input type="checkbox" value="designtool" checked> Design tool simulations 1 (DT1)</label>
-      <label style="margin: 0 8px;"><input type="checkbox" value="dc1" checked> Data Challenge 1 (DC1)</label>
-      <label style="margin: 0 8px;"><input type="checkbox" value="deprecated"> Deprecated</label>
+      <label style="margin: 0 8px;"><input class="filter" type="checkbox" value="designtool" checked> Design tool simulations 1 (DT1)</label>
+      <label style="margin: 0 8px;"><input class="filter" type="checkbox" value="dc1" checked> Data Challenge 1 (DC1)</label>
+      <label style="margin: 0 8px;"><input class="filter" type="checkbox" value="deprecated"> Deprecated</label>
     </p>
 
     <div class="form-wrapper">
@@ -85,14 +91,17 @@
 
 <script>
 function update_dataset_rows(){
-  $( "#dataset_filter input[type='checkbox']" ).each(function() {
+  $( "#permission_filter input[type='checkbox']" ).each(function() {
       $( "#dataset_table tr." + $(this).val() ).css("display", $(this).prop("checked") ? "table-row" : "none");
+  });
+  $( "#dataset_filter input[type='checkbox']" ).each(function() {
+      $( "#dataset_table tr." + $(this).val() + '[style*="display: table-row"]' ).css("display", $(this).prop("checked") ? "table-row" : "none");
   });
 }
 
 $( document ).ready(function() {
 
-  $( "#dataset_filter input[type='checkbox']" ).change(function() {
+  $( "input[type='checkbox'].filter" ).change(function() {
     update_dataset_rows();
   });
 
