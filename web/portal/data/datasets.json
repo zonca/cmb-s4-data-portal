@@ -63,6 +63,15 @@
         "browse": "True"
     },
     {
+        "name": "DC1: CMB Coadded maps LAT Chile",
+        "id": "99090020-015c-4674-a35c-269159263ce9",
+        "path": "coadd_cmb_LAT0_CHLAT",
+        "size": "221 GB",
+        "tags": ["s4only","dc1"],
+        "doc_name": "coadd_cmb_LAT0_CHLAT",
+        "browse": "True"
+    },
+    {
         "name": "DM only DT1: Noise only no splits",
         "id": "81e36870-d773-4783-bbfb-7bdcf334fb62",
         "path": "DM_only_simulation/noise",
