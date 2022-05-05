@@ -1,5 +1,8 @@
 image = registry.nersc.gov/mp107/dataportal:latest
 
+login:
+	docker login https://registry.spin.nersc.gov/
+
 build:
 	docker build . -t $(image)
 
