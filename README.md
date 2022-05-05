@@ -17,8 +17,14 @@ Please [Open an issue](https://github.com/zonca/cmb-s4-data-portal/issues/new) i
 The data is stored on CMB-S4 project space in the NERSC Community File System (CFS) at:
 
     /global/project/projectdirs/cmbs4/gsharing/globus
-    
+
 The portal doesn't support nested folders, so you first need to restructure the data so that they just a single folder or a list of a few folders with only files in them.
+
+Then we need to add the dataset to the JSON dataset description in:
+
+    web/portal/data/datasets.json
+
+copy-paste one of the other definitions, generate a new UUID with `uuidgen`, adjust the tags.
 
 We can optionally create a "Dataset filter" (for example in the current portal we have "Data Challenge 1" and "Design tool simulations 1" to group folders together.
 
